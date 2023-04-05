@@ -1,4 +1,4 @@
-# Mee6 Stats Converter
+# Mee6 Stats Downloader
 
 ## Description
 Do you want to extract the data collected by Mee6 to use with your own bot? Mee6 won't provide this data to you for obvious reasons...
