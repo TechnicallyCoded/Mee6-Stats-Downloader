@@ -24,14 +24,14 @@ The format it saves the data to is JSON. Example output data:
     // First entry of this page
     {
       "avatar": "00000000000000000000000000000000", // avatar id (can be used to fetch the user's profile picture)
-      "detailed_xp": [11873, 12980, 225198], 		// not sure?
-      "discriminator": "0000", 						// #1234 "discriminator" of this user
-      "guild_id": "000000000000000000", 			// guild id
-      "id": "000000000000000000", 					// discord user snowflake
-      "level": 46, 									// mee6 level of this user
-      "message_count": 11258, 						// total messages counted for this user by mee6
-      "username": "MY_USERNAME", 					// Human readable username of this user
-      "xp": 225198 									// total xp of this user
+      "detailed_xp": [11873, 12980, 225198],        // not sure?
+      "discriminator": "0000",                      // #1234 "discriminator" of this user
+      "guild_id": "000000000000000000",             // guild id
+      "id": "000000000000000000",                   // discord user snowflake
+      "level": 46,                                  // mee6 level of this user
+      "message_count": 11258,                       // total messages counted for this user by mee6
+      "username": "MY_USERNAME",                    // Human readable username of this user
+      "xp": 225198                                  // total xp of this user
     },
     // Entry X of this page
     {
