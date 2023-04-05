@@ -48,7 +48,7 @@ The format it saves the data to is JSON. Example output data:
 ```
 
 ## Extra details
-You can retrive the user avatar using this link format: https://cdn.discordapp.com/avatars/USER_SNOWFLAKE_ID/AVATAR_ID.webp?size=512
+You can retrieve the user avatar using this link format: https://cdn.discordapp.com/avatars/USER_SNOWFLAKE_ID/AVATAR_ID.webp?size=512
 
 ## Example Mee6 page entry for other developers' reference
 This is the data format for one entry of Mee6's website data (inside of one page). I automatically retrieve the "player" object and write it to a separate file.
