@@ -104,7 +104,7 @@ This is the data format for one entry of Mee6's website data (inside of one page
 In this section I will explain how we will trick the website into thinking it's a browser that's loading the data by modifying our headers. This can be useful if you are being blocked by the website in the case it detects our attempts at scraping the data from their hidden API.
 
 ### Explanation
-When loading the leaderboard page, Mee6's website loads the data in "pages". This allows quick access of the top X users immediately as you load the page, then loads the rest of the data as you request more instead of trying to get all the data immediately (slow).
+When loading the leaderboard page, Mee6's website loads the data in "pages". This allows quick access of the top X users immediately as you load the page. It will proceed to load the rest of the user data as you request more. It does this instead of trying to get all the data immediately, which is slow.
 We will ~~abuse~~ use this feature to download the data.
 
 ### Steps
