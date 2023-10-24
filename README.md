@@ -108,10 +108,11 @@ When loading the leaderboard page, Mee6's website loads the data in "pages". Thi
 We will ~~abuse~~ use this feature to download the data.
 
 ### Steps
-1. Open your developer tools on the website, and find the XHR request to get any page. It doesn't have
-to be the first one.
-2. Copy the cURL command from Chrome/Firefox developer tools. This program will simulate being your 
-browser and retrieve all pages of data 0 -> X until there is no more data to retrieve.
+1. Open your developer tools on the website
+2. Find the XHR request to get any page. It doesn't have
+to be the first one. A good way to do this is to use the search tool and type "page".
+4. Copy the cURL command from Chrome/Firefox developer tools.
+5. Set the environment variable "CURL_COMMAND" to the curl command you just copied
+6. Run the script like such: `python3 main.py`
 
-### Apply this to the script
-Set the environment variable "CURL_COMMAND" to the curl command you copied, then run the script.
+This program will pretend to be your browser and retrieve all pages of data 0 -> X until there is no more data left to retrieve.
