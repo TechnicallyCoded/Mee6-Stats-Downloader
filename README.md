@@ -5,16 +5,13 @@ Do you want to extract the data collected by Mee6 to use with your own bot? Mee6
 This is a script/program which will download all this data to a machine readable format "JSON" and act as your browser to evade restrictions of API access.
 The machine readable format should allow you to then import all existing user data into your own bot.
 
+## Requirements
+Python 3.X
+
 ## How to use it?
-When loading the leaderboard page, Mee6's website loads the data in "pages". This allows quick access of the top X users immediately as you load the page, then loads the rest of the data as you request more instead of trying to get all the data immediately (slow).
-We will ~~abuse~~ use this feature to download the data.
+Run `python3 main.py <DISCORD-GUILD-ID>`. 
 
-1. Open your developer tools on the website, and find the XHR request to get any page. It doesn't have
-to be the first one.
-2. Copy the cURL command from Chrome/Firefox developer tools. This program will simulate being your 
-browser and retrieve all pages of data 0 -> X until there is no more data to retrieve.
-
-Set the environment variable "CURL_COMMAND" to the curl command you copied, then run the script.
+If Mee6 is blocking your requests, try applying the headers from your browser to the script. To do this, follow the advanced usage at the bottom.
 
 The format it saves the data to is JSON. Example output data:
 ```
@@ -101,3 +98,20 @@ This is the data format for one entry of Mee6's website data (inside of one page
   "xp_rate": 1
 }
 ```
+
+## Advanced Usage
+### Intro
+In this section I will explain how we will trick the website into thinking it's a browser that's loading the data by modifying our headers. This can be useful if you are being blocked by the website in the case it detects our attempts at scraping the data from their hidden API.
+
+### Explanation
+When loading the leaderboard page, Mee6's website loads the data in "pages". This allows quick access of the top X users immediately as you load the page, then loads the rest of the data as you request more instead of trying to get all the data immediately (slow).
+We will ~~abuse~~ use this feature to download the data.
+
+### Steps
+1. Open your developer tools on the website, and find the XHR request to get any page. It doesn't have
+to be the first one.
+2. Copy the cURL command from Chrome/Firefox developer tools. This program will simulate being your 
+browser and retrieve all pages of data 0 -> X until there is no more data to retrieve.
+
+### Apply this to the script
+Set the environment variable "CURL_COMMAND" to the curl command you copied, then run the script.
