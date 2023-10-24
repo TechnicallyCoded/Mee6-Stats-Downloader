@@ -11,7 +11,7 @@ import sys
 # The curl command copied from dev tools
 CURL_COMMAND = os.environ['CURL_COMMAND']
 GUILD_ID = os.environ['GUILD_ID']
-if CURL_COMMAND is None
+if CURL_COMMAND is None:
     if GUILD_ID is None and len(sys.argv) > 1:
         GUILD_ID = sys.argv[1]
     if GUILD_ID is not None:
