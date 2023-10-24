@@ -15,7 +15,7 @@ if CURL_COMMAND is None:
     if GUILD_ID is None and len(sys.argv) > 1:
         GUILD_ID = sys.argv[1]
     if GUILD_ID is not None:
-        CURL_COMMAND = "https://mee6.xyz/api/plugins/levels/leaderboard/" + GUILD_ID + "?page=0"
+        CURL_COMMAND = "curl 'https://mee6.xyz/api/plugins/levels/leaderboard/" + GUILD_ID + "?page=0'"
 
 if CURL_COMMAND is None:
     exit(1)
@@ -36,7 +36,7 @@ url = CURL_COMMAND.replace("curl '", "").split(" ")[0][:-1]
 
 for part in CURL_COMMAND.split(" -H "):
     # print("> HEADER")
-    if part.startswith("curl "):
+    if part.startswith("curl ") or not part:
         # print("nope")
         continue
     # print("part:", part)
@@ -56,7 +56,7 @@ for i in range(MAX_PAGES):
     json_resp = resp.json()
     json_players = json_resp["players"]
     json_players_len = len(json_players)
-    print("LEN:", str(json_players_len))
+    print("> Found:", str(json_players_len), "users.")
 
     if json_players_len == 0:
         break
